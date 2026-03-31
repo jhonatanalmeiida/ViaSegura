@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Layout do histórico de viagens -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#121212">
+
+    <!-- Mensagem exibida quando não há viagens registradas -->
+    <TextView
+        android:id="@+id/tv_historico_vazio"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="Nenhuma viagem registrada ainda.\nInicie o monitoramento para começar."
+        android:textColor="#888888"
+        android:textSize="16sp"
+        android:gravity="center"
+        android:visibility="gone"
+        android:padding="32dp"/>
+
+    <!-- Lista de viagens -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_viagens"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="8dp"
+        android:clipToPadding="false"/>
+
+</LinearLayout>

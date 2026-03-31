@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Layout principal do ViaSegura.
+    Exibe o velocímetro, indicador de sinal GPS, seletor de limite e botões de controle.
+    Segue Material Design 3.
+-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#121212"
+    android:padding="16dp">
+
+    <!-- Barra de status GPS -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginBottom="8dp">
+
+        <TextView
+            android:id="@+id/tv_status"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Parado"
+            android:textColor="#AAAAAA"
+            android:textSize="14sp"/>
+
+        <TextView
+            android:id="@+id/tv_sinal_gps"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="GPS Inativo"
+            android:textColor="#FF9800"
+            android:textSize="14sp"/>
+    </LinearLayout>
+
+    <!-- Painel de velocidade (muda de cor quando excede o limite) -->
+    <LinearLayout
+        android:id="@+id/view_indicador"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:background="#1E1E1E"
+        android:layout_marginBottom="16dp">
+
+        <!-- Velocidade atual em número grande -->
+        <TextView
+            android:id="@+id/tv_velocidade"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:textSize="120sp"
+            android:textStyle="bold"
+            android:textColor="#4CAF50"/>
+
+        <!-- Unidade km/h -->
+        <TextView
+            android:id="@+id/tv_unidade"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="km/h"
+            android:textSize="24sp"
+            android:textColor="#AAAAAA"/>
+
+        <!-- Velocidade máxima da viagem atual -->
+        <TextView
+            android:id="@+id/tv_vel_maxima"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Máx: 0 km/h"
+            android:textSize="16sp"
+            android:textColor="#888888"
+            android:layout_marginTop="8dp"/>
+    </LinearLayout>
+
+    <!-- Seletor de limite de velocidade -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Limite de velocidade:"
+        android:textColor="#CCCCCC"
+        android:textSize="14sp"
+        android:layout_marginBottom="4dp"/>
+
+    <Spinner
+        android:id="@+id/spinner_limite"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#4CAF50"
+        android:layout_marginBottom="16dp"/>
+
+    <!-- Botão principal: Iniciar/Parar monitoramento -->
+    <Button
+        android:id="@+id/btn_monitorar"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:text="Iniciar"
+        android:textSize="18sp"
+        android:backgroundTint="@android:color/holo_green_dark"
+        android:textColor="#FFFFFF"
+        android:layout_marginBottom="8dp"/>
+
+    <!-- Botão para abrir histórico de viagens -->
+    <Button
+        android:id="@+id/btn_historico"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:text="Ver Histórico"
+        android:textSize="16sp"
+        android:backgroundTint="#333333"
+        android:textColor="#FFFFFF"/>
+
+</LinearLayout>

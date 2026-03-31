@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    AndroidManifest.xml — ViaSegura
+    Declara permissões de localização e configuração das Activities/Services.
+-->
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.viasegura">
+
+    <!-- Permissões de localização GPS precisas e aproximadas -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+
+    <!-- Necessário para manter o SpeedMonitorService rodando em background -->
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_LOCATION"/>
+
+    <!-- Vibração para alertas de excesso de velocidade -->
+    <uses-permission android:name="android.permission.VIBRATE"/>
+
+    <!-- Declara que o app usa GPS (não é obrigatório ter o hardware para instalar) -->
+    <uses-feature android:name="android.hardware.location.gps" android:required="false"/>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@android:drawable/ic_menu_compass"
+        android:label="@string/app_name"
+        android:roundIcon="@android:drawable/ic_menu_compass"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.AppCompat.DayNight.NoActionBar">
+
+        <!-- Tela principal -->
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+
+        <!-- Tela de histórico de viagens -->
+        <activity
+            android:name=".HistoricoActivity"
+            android:exported="false"
+            android:parentActivityName=".MainActivity"/>
+
+        <!-- Serviço de monitoramento GPS em foreground -->
+        <service
+            android:name=".SpeedMonitorService"
+            android:exported="false"
+            android:foregroundServiceType="location"/>
+
+    </application>
+</manifest>

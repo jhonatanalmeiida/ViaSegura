@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">ViaSegura</string>
+    <string name="btn_iniciar">Iniciar</string>
+    <string name="btn_parar">Parar</string>
+    <string name="status_monitorando">Monitorando...</string>
+    <string name="status_parado">Parado</string>
+    <string name="gps_forte">GPS Forte</string>
+    <string name="gps_fraco">GPS Fraco</string>
+    <string name="gps_inativo">GPS Inativo</string>
+    <string name="label_limite">Limite de velocidade:</string>
+    <string name="btn_historico">Ver Histórico</string>
+    <string name="historico_titulo">Histórico de Viagens</string>
+    <string name="historico_vazio">Nenhuma viagem registrada ainda.</string>
+    <string name="permissao_necessaria">Permissão de localização necessária para o funcionamento do app</string>
+</resources>

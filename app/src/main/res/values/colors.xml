@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Cores do tema Material Design 3 -->
+    <color name="primary">#4CAF50</color>           <!-- Verde principal -->
+    <color name="primary_variant">#388E3C</color>   <!-- Verde escuro -->
+    <color name="secondary">#FF9800</color>         <!-- Laranja para alertas médios -->
+    <color name="danger">#F44336</color>            <!-- Vermelho para excesso de velocidade -->
+    <color name="background">#121212</color>        <!-- Fundo escuro -->
+    <color name="surface">#1E1E1E</color>           <!-- Superfície de cards -->
+    <color name="on_surface">#FFFFFF</color>        <!-- Texto sobre superfície -->
+    <color name="text_secondary">#AAAAAA</color>   <!-- Texto secundário -->
+</resources>
